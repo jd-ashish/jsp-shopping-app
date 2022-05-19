@@ -150,7 +150,7 @@ public class CartController extends HttpServlet {
             //stock
             ProductsStock productsStock = ProductsDetailsDao.getProductsStocks(cart.getStock_id()).get(0);
             //product
-            Products products = ProductsDao.getProductsById(productsStock.getProduct_id()).get(0);
+            Products products = ProductsDao.getProductsById("",productsStock.getProduct_id()).get(0);
             //Order model
             OrderDetails orderDetails = new OrderDetails(order_id, cart.getStock_id());
             OrderDetailsDao.create(request, orderDetails);

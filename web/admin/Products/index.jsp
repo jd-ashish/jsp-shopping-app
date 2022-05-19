@@ -87,7 +87,7 @@
                                             <td><img src="../img/products/<%= products.getThumbnail()%>" alt="alt" width="40px"/></td>
                                             <td><%= products.getName()%></td>
                                             
-                                            <td><%= brandDao.getBrandById(products.getBrand()).getName() %></td>
+                                            <td><%= (products.getBrand()!=0)?brandDao.getBrandById(products.getBrand()).getName():"" %></td>
                                             
 
                                             <td><%= categoryDao.getCategoryById(products.getCateory()).getName()%></td>

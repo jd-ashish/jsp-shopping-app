@@ -25,9 +25,10 @@ import modal.User;
  */
 public class CategoryDao {
 
+    public static final String table = "category";
     public static void create(HttpServletRequest request, Category category) {
         Connection con = DBConnect.getConnection();
-        String sql = "INSERT INTO `category`(`user_id`, `brand_id`, `name`, `img`, `status`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO "+category+"(`user_id`, `brand_id`, `name`, `img`, `status`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?,?)";
 
         User user = new Auth(request).user();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

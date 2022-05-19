@@ -68,7 +68,7 @@
                 SubSubCategoryDao subSubCategoryDao = new SubSubCategoryDao();
 
                 ProductsDao productsDao = new ProductsDao();
-                Products product = productsDao.getProductsById(Integer.valueOf(request.getParameter("index").split("-")[1])).get(0);
+                Products product = productsDao.getProductsById("",Integer.valueOf(request.getParameter("index").split("-")[1])).get(0);
 
                 ProductsDetailsDao productsDetailsDao = new ProductsDetailsDao();
                 ProductsStock productsStock = productsDetailsDao.getProductsStocksByProductId(product.getId()).get(0);

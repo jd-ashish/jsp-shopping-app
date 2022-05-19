@@ -32,7 +32,7 @@ public class ProductsDao {
         int insertid = 0;
         Connection con = DBConnect.getConnection();
         String sql = "INSERT INTO `products`(`user_id`, `name`, `unit`, `brand`, `cateory`, `sub_category`, `sub_sub_category`, "
-                + "`thumbnail`, `main_image`, `details`, `status`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+                + "`thumbnail`, `main_image`, `details`, `status`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         User user = new Auth(request).user();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -97,8 +97,8 @@ public class ProductsDao {
             ps.setInt(5, products.getCateory());
             ps.setInt(6, products.getSub_category());
             ps.setInt(7, products.getSub_sub_category());
-            ps.setString(8, (products.getThumbnail().equals("")) ? getProductsById(products.getId()).get(0).getThumbnail() : products.getThumbnail());
-            ps.setString(9, (products.getMain_image().equals("")) ? getProductsById(products.getId()).get(0).getMain_image() : products.getMain_image());
+            ps.setString(8, (products.getThumbnail().equals("")) ? getProductsById("",products.getId()).get(0).getThumbnail() : products.getThumbnail());
+            ps.setString(9, (products.getMain_image().equals("")) ? getProductsById("",products.getId()).get(0).getMain_image() : products.getMain_image());
 
             ps.setString(10, products.getDetails());
             ps.setInt(11, 1);
@@ -118,8 +118,8 @@ public class ProductsDao {
     }
 
     public static void imageDel(HttpServletRequest request, Products products, String type) {
-        String thumbnail = getProductsById(products.getId()).get(0).getThumbnail();
-        String[] main_img = Utils.StrinArrayToArray(getProductsById(products.getId()).get(0).getMain_image());
+        String thumbnail = getProductsById("",products.getId()).get(0).getThumbnail();
+        String[] main_img = Utils.StrinArrayToArray(getProductsById("",products.getId()).get(0).getMain_image());
 
         if (type.equals("main")) {
             for (String mainImg : main_img) {
@@ -135,18 +135,29 @@ public class ProductsDao {
     }
 
     public static List<Products> getProducts() {
-        return getProductsById(-1);
+        return getProductsById("",-1);
+    }
+    public static List<Products> getProducts(String col, int id){
+        return getProductsById(col,id);
     }
 
-    public static List<Products> getProductsById(int pid) {
+    public static List<Products> getProductsById(String col, int pid) {
         Connection con = DBConnect.getConnection();
         String sql = "select * from products";
         if (pid == -1) {
             sql = "select * from products";
-        } else {
+        } else if(col.equals("")){
             sql = "select * from products where id='" + pid + "'";
+        }else if(!col.equals("")){
+            if(pid==-99){
+                sql = "SELECT * FROM `products` WHERE `details` LIKE '%"+col+"%'";
+            }else{
+                sql = "select * from products where "+col+"=" + pid + "";
+            }
+            
         }
 
+        System.err.println("col "+col+" pid "+pid +" =============== sql "+sql);
         PreparedStatement ps;
         ArrayList<Products> productses = new ArrayList<>();
         try {

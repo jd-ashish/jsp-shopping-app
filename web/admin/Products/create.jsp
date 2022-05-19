@@ -126,7 +126,7 @@
                                     <div class="col-12">
                                         <label for="inputNanme4" class="form-label">Select brand</label>
                                         <select class="form-control select2" na style="width: 100%" name="brand_id" required>
-                                            <option>Select brand</option>
+                                            <option value="0">Select brand</option>
                                             <%
                                                 for (Brand brand : brandDao.getBrandList()) {
                                             %>
@@ -139,7 +139,7 @@
                                     <div class="col-12">
                                         <label class="form-label">Select Category </label>
                                         <select class="form-control select2" na style="width: 100%" name="category_id" required>
-                                            <option>Select Category</option>
+                                            <option value="0">Select Category</option>
                                             <%
                                                 for (Category category : categoryDao.getCategoryList()) {
                                             %>
@@ -152,7 +152,7 @@
                                     <div class="col-12">
                                         <label class="form-label">Select Sub Category </label>
                                         <select class="form-control select2" na style="width: 100%" name="sub_category_id" required>
-                                            <option>Select Category</option>
+                                            <option value="0">Selectsub Category</option>
                                             <%
                                                 for (SubCategory category : subCategoryDao.getSubCategoryList()) {
                                             %>
@@ -165,7 +165,7 @@
                                     <div class="col-12">
                                         <label class="form-label">Select Sub Sub Category </label>
                                         <select class="form-control select2" na style="width: 100%" name="sub_sub_category_id" required>
-                                            <option value="0">Select Category</option>
+                                            <option value="0">Select sub sub Category</option>
                                             <%
                                                 for (SubSubCategory category : subSubCategoryDao.getSubSubCategoryList()) {
                                             %>

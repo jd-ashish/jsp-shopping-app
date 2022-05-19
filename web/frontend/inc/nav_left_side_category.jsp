@@ -1,3 +1,5 @@
+<%@page import="Helper.Utils"%>
+<%@page import="Helper.GenBase64"%>
 <%@page import="modal.Category"%>
 <%@page import="Dao.SubCategoryDao"%>
 <%@page import="Dao.CategoryDao"%>
@@ -23,7 +25,7 @@
                     if(subCategoryDao.getSubCategoryListByCategoryId(category.getId()).size()<1){
                     
                     %>
-                    <li><a href="products.html"><%= category.getName() %></a></li>
+                    <li><a href="<%= Utils.getBaseUrl(request) %>/products?type_name=<%= GenBase64.enCode(category.getName()) %>&type=<%= GenBase64.enCode("cateory") %>&data=<%= GenBase64.enCode(String.valueOf(category.getId())) %>"><%= category.getName() %></a></li>
                     <% }else{ %>
                     <li class="dropdown mega-dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= category.getName() %><span class="caret"></span></a>				
@@ -33,7 +35,7 @@
                                     <%
                                     for(SubCategory subCategory:subCategoryDao.getSubCategoryListByCategoryId(category.getId())){
                                     %>
-                                    <li><a href="vegetables.html"><%= subCategory.getName() %></a></li>
+                                    <li><a href="<%= Utils.getBaseUrl(request) %>/products?type_name=<%= GenBase64.enCode(subCategory.getName()) %>&type=<%= GenBase64.enCode("sub_category") %>&data=<%= GenBase64.enCode(String.valueOf(subCategory.getId())) %>"><%= subCategory.getName() %></a></li>
                                     <% } %>
                                 </ul>
                             </div>                  

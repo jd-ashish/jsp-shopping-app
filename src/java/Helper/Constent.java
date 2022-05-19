@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class Constent {
 
+    //hint for number
+//    -99 = for search 
+    
+    //
     public static final String APP_NAME = "Shopping";
     public static final String LOGIN_COOKIE_NAME = "shoppinglogin";
     public static final String CURRENCY_ICON_STRING = "&#8377;";
@@ -52,5 +56,8 @@ public class Constent {
     }
     public static final String getPaymentUrl(HttpServletRequest request) {
         return Utils.getBaseUrl(request) + "/payment";
+    }
+    public static final String getBannerUrl(HttpServletRequest request) {
+        return Utils.getBaseUrl(request) + "/admin/banner";
     }
 }

@@ -4,49 +4,67 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/payment.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/CartDao.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/top_header.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/GenBase64.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/header.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/footer.jsp</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/banner.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/OrderDetailsDao.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/layout/product_listing.jsp</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/SubSubCategoryDao.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/nav_left_side_category.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/assets/css/style.css</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/SubSubCategory/sub_sub_cat_index.jsp</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/DummyController.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/asset/css/main2.css</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/asset/css/main.css</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/Constent.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/cart_list_page.jsp</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/index.jsp</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/CategoryServlet.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/top_brand.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/layout/payment_layout.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/Products/index.jsp</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/CategoryDao.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/asset/css/style.css</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/ProductsDao.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/newsletter.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/sticky_nav.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/cart.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/inc/nav.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/Products/create.jsp</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/Utils.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/CartController.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/modal/Order.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/OrderProducts.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/modal/Products.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/ProductsDetailsDao.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/CommonFileUpload.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/ProductServlet.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/PaymentController.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/AdminServlet.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/modal/OrderDetails.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/BrandDao.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/BrandsServlet.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/LoginServlet.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/footer_sections.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/SubSubCategoryServlet.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/modal/Cart.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/UserDao.java</file>
             <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/inc/side_nav.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/Products/update.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/banner/create.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/CartDao.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/top_header.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/GenBase64.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/footer.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/OrderDetailsDao.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/nav_left_side_category.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/assets/css/style.css</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/Constent.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/BannerController.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/modal/ProductsStock.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/SubCategory/cat_create.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/layout/payment_layout.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/top_products.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/newsletter.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/sticky_nav.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/cart.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/banner/index.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/CartController.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/modal/Order.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/OrderProducts.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/BrandServlet.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/ProductServlet.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/PaymentController.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/AdminServlet.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/SubCategory/cat_index.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/modal/OrderDetails.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/BrandDao.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/LoginServlet.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/footer_sections.jsp</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/com/service/app/CartDetails.java</file>
+            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/ProductsController.java</file>
         </group>
     </open-files>
 </project-private>

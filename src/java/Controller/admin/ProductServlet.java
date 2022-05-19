@@ -106,8 +106,8 @@ public class ProductServlet extends HttpServlet {
     }// </editor-fold>
 
     private void productsUpload(HttpServletRequest request, HttpServletResponse response, PrintWriter out) throws IOException {
-        ArrayList<String> img = new CommonFileUpload(UPLOAD_PATH_FILES, request).use();
-        int brand_id = Integer.valueOf(request.getParameter("brand_id"));
+        ArrayList<String> img;
+        int brand_id = Integer.valueOf((request.getParameter("brand_id").equalsIgnoreCase("Select brand"))?"0":request.getParameter("brand_id"));
         int category_id = Integer.valueOf(request.getParameter("category_id"));
         int sub_category_id = Integer.valueOf(request.getParameter("sub_category_id"));
         int sub_sub_category_id = Integer.valueOf(request.getParameter("sub_sub_category_id"));
@@ -116,7 +116,9 @@ public class ProductServlet extends HttpServlet {
         String descriptions = request.getParameter("descriptions");
         String thumbnails = "";
         String[] mainImage = null;
+        img = new CommonFileUpload(UPLOAD_PATH_FILES, request).use();
         if (img.size() >= 1) {
+            
             thumbnails = img.get(0);
         }
         if (img.size() > 1) {
@@ -131,7 +133,7 @@ public class ProductServlet extends HttpServlet {
         Products products = new Products(brand_id, category_id, sub_category_id, sub_sub_category_id, name, unit, thumbnails, gson.toJson(mainImage), descriptions);
 //       
         int insert_id = productsDao.create(request, products);
-        int number_of_stock = Integer.valueOf(request.getParameter("brand_id").replace(",", "").replace(" ", "").replace("-", ""));
+        int number_of_stock = Integer.valueOf(request.getParameter("number_of_stock").replace(",", "").replace(" ", "").replace("-", ""));
         int total_price = Integer.valueOf(request.getParameter("total_price").replace(",", "").replace(" ", "").replace("-", ""));
         int offer_price = Integer.valueOf(request.getParameter("offer_price").replace(",", "").replace(" ", "").replace("-", ""));
 
@@ -152,7 +154,7 @@ public class ProductServlet extends HttpServlet {
         ArrayList<String> img;
         int pid = Integer.valueOf(request.getParameter("pid"));
         int sid = Integer.valueOf(request.getParameter("sid"));
-        int brand_id = Integer.valueOf(request.getParameter("brand_id"));
+        int brand_id = Integer.valueOf((request.getParameter("brand_id").equalsIgnoreCase("Select brand"))?"0":request.getParameter("brand_id"));
         int category_id = Integer.valueOf(request.getParameter("category_id"));
         int sub_category_id = Integer.valueOf(request.getParameter("sub_category_id"));
         int sub_sub_category_id = Integer.valueOf(request.getParameter("sub_sub_category_id"));
@@ -186,7 +188,7 @@ public class ProductServlet extends HttpServlet {
         productsDao.update(request, products);
 //       
 //        int insert_id = 
-        int number_of_stock = Integer.valueOf(request.getParameter("brand_id").replace(",", "").replace(" ", "").replace("-", ""));
+        int number_of_stock = Integer.valueOf(request.getParameter("number_of_stock").replace(",", "").replace(" ", "").replace("-", ""));
         int total_price = Integer.valueOf(request.getParameter("total_price").replace(",", "").replace(" ", "").replace("-", ""));
         int offer_price = Integer.valueOf(request.getParameter("offer_price").replace(",", "").replace(" ", "").replace("-", ""));
 

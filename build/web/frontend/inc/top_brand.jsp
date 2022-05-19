@@ -40,7 +40,7 @@
                                 <div class="snipcart-item block" >
                                     <div class="snipcart-thumb">
                                         <a href="single.html"><img title=" " alt=" " src="img/products/<%= products.getThumbnail()%>" width="100px"  height="170"/></a>		
-                                        <p><%= products.getName()%></p>
+                                        <p class="products-name"><%= products.getName()%></p>
                                         <h4><% if (productsStock.size() > 0) {%><%= Utils.CurrencyFormaString(String.valueOf(productsStock.get(0).getOffer_price()))%><% } %> <span><% if (productsStock.size() > 0) {%><%= Utils.CurrencyFormaString(String.valueOf(productsStock.get(0).getTotal_price()))%><% }%></span></h4>
 
                                     </div>

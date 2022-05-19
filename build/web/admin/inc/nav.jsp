@@ -167,6 +167,14 @@
           </ul><!-- End Messages Dropdown Items -->
 
         </li><!-- End Messages Nav -->
+        <li class="nav-item dropdown">
+
+            <a class="nav-link nav-icon" href="<%= Utils.getBaseUrl(request) %>" target="_blank">
+            <i class="bx bx-globe"></i>
+          </a><!-- End Messages Icon -->
+
+          
+        </li>
 
         <li class="nav-item dropdown pe-3">
 

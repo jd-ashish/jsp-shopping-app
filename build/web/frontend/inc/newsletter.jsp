@@ -5,9 +5,7 @@
         </div>
         <div class="w3agile_newsletter_right">
             <form action="#" method="post">
-                <input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                    this.value = 'Email';
-                                }" required="">
+                <input type="text" name="Email" id="Newsletter">
                 <input type="submit" value="subscribe now">
             </form>
         </div>

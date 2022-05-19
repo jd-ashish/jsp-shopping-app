@@ -54,7 +54,7 @@ public class CartDetails {
             for (Cart carts : cartDao.getCart(request)) {
                 arrayListCartIds.add(String.valueOf(carts.getId()));
                 ProductsStock productsStocks = productsDetailsDao.getProductsStocks(carts.getStock_id()).get(0);
-                Products productses = productsDao.getProductsById(productsStocks.getProduct_id()).get(0);
+                Products productses = productsDao.getProductsById("",productsStocks.getProduct_id()).get(0);
                 cart_total += "                        <li>" + productses.getName().substring(0, (productses.getName().length() >= 30) ? 30 : productses.getName().length()) + " <i>-</i> <span>" + Utils.CurrencyFormaString(String.valueOf(productsStocks.getOffer_price() * carts.getQty())) + " </span></li>\n";
                 total_amount += Double.valueOf(String.valueOf(productsStocks.getOffer_price() * carts.getQty()));
 
