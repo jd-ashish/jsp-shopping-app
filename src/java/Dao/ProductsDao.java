@@ -156,8 +156,6 @@ public class ProductsDao {
             }
             
         }
-
-        System.err.println("col "+col+" pid "+pid +" =============== sql "+sql);
         PreparedStatement ps;
         ArrayList<Products> productses = new ArrayList<>();
         try {

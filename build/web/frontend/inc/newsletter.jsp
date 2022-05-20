@@ -6,7 +6,7 @@
         <div class="w3agile_newsletter_right">
             <form action="#" method="post">
                 <input type="text" name="Email" id="Newsletter">
-                <input type="submit" value="subscribe now">
+                <input type="button" value="subscribe now" onclick="newsletter()">
             </form>
         </div>
         <div class="clearfix"> </div>

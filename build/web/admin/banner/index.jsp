@@ -4,6 +4,8 @@
     Author     : Dell1
 --%>
 
+<%@page import="Dao.BannerDao"%>
+<%@page import="modal.Banner"%>
 <%@page import="modal.SubCategory"%>
 <%@page import="Dao.SubCategoryDao"%>
 <%@page import="modal.KeyValues"%>
@@ -60,9 +62,8 @@
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Image</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Brand</th>
-                                            <th scope="col">Category</th>
+                                            <th scope="col">Positions</th>
+                                            <th scope="col">Title</th>
                                             <th scope="col">Created at</th>
                                         </tr>
                                     </thead>
@@ -70,26 +71,14 @@
 
                                         <%
                                             int count = 0;
-                                            for (SubCategory subCategory : subCategoryDao.getSubCategoryList()) {
+                                            for (Banner banner : BannerDao.getBannerList(-1)) {
                                         %>
                                         <tr>
                                             <th scope="row"><%= ++count%></th>
-                                            <td><img src="../img/category/<%= subCategory.getImg()%>" alt="alt" width="40px"/></td>
-                                            <td><%= subCategory.getName()%></td>
-                                            <%
-                                                if (subCategory.getBrand_id() != 0) {
-                                            %>
-                                            <td><%= brandDao.getBrandById(subCategory.getBrand_id())%></td>
-                                            <%
-                                            } else {
-                                            %>
-                                            <td class="text-danger">No brand</td>
-                                            <%
-                                                }
-                                            %>
-
-                                            <td><%= categoryDao.getCategoryById(subCategory.getCategory_id()).getName() %></td>
-                                            <td><%= subCategory.getCreated_at()%></td>
+                                            <td><img src="../img/banner/<%= banner.getFile()%>" alt="alt" width="40px"/></td>
+                                            <td><%= banner.getPositions()%></td>
+                                            <td><%= banner.getTitle() %></td>
+                                            <td><%= banner.getCreated_at()%></td>
                                         </tr>
                                         <%
                                             }

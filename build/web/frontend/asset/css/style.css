@@ -1038,7 +1038,7 @@ button.submit.check_out{
     width: 74%;
     float: left;
 }
-.w3agile_newsletter_right input[type="submit"]{
+.w3agile_newsletter_right input[type="button"]{
     outline: none;
     padding: 10px 0;
     background: #fff;

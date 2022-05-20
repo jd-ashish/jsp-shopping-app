@@ -135,10 +135,7 @@
             }
         });
     }
-//    $(".remove_cart").click(function () {
-//        alert();
 
-//    })
     getCart();
     function getCart() {
         var url = "<%= Constent.getCartUrl(request)%>";
@@ -156,6 +153,41 @@
             }
         });
     }
+
+    function newsletter() {
+        if (ValidateEmail($("#Newsletter").val())) {
+            var url = "<%= Constent.getNewsletterUrl(request)%>";
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: {index: "Newsletter", email: $("#Newsletter").val()},
+                success: function (data)
+                {
+                    Swal.fire(
+                            'Thanks for Newsletter !',
+                            'You will get letest offer or products details!',
+                            'success'
+                            );
+                }
+            });
+        }
+
+    }
+
+    function ValidateEmail(inputText)
+    {
+        var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!filter.test(inputText)) {
+            Swal.fire(
+                    'Email not valid!',
+                    'You have entered an invalid email address!',
+                    'error'
+                    );
+            return false;
+        }
+        return true;
+    }
+
 </script>
 <!-- //here ends scrolling icon -->
 <script src="<%= Utils.getBaseUrl(request)%>/frontend/asset/js/minicart.js"></script>

@@ -56,6 +56,22 @@
         <servlet-name>BannerController</servlet-name>
         <servlet-class>Controller.admin.BannerController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NewsLetterController</servlet-name>
+        <servlet-class>Controller.NewsLetterController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductsDetailsController</servlet-name>
+        <servlet-class>Controller.ProductsDetailsController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InformationsController</servlet-name>
+        <servlet-class>Controller.InformationsController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FooterController</servlet-name>
+        <servlet-class>Controller.admin.FooterController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -111,6 +127,22 @@
     <servlet-mapping>
         <servlet-name>BannerController</servlet-name>
         <url-pattern>/admin/banner</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewsLetterController</servlet-name>
+        <url-pattern>/newsletter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductsDetailsController</servlet-name>
+        <url-pattern>/products-details</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InformationsController</servlet-name>
+        <url-pattern>/info/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FooterController</servlet-name>
+        <url-pattern>/admin/footer</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

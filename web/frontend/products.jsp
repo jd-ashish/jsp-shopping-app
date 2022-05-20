@@ -7,20 +7,6 @@
 <%@page import="Helper.Utils"%>
 <%@page import="Helper.Constent"%>
 
-<%
-    if (Utils.getCookies(request, Constent.LOGIN_COOKIE_NAME) == null) {
-        response.sendRedirect(Utils.getBaseUrl(request) + "/login");
-    }
-
-//            Cookie cookie = new Cookie(Constent.LOGIN_COOKIE_NAME, "");
-    Cookie cookie1 = Utils.getCookies(request, Constent.LOGIN_COOKIE_NAME);
-    if (cookie1 != null) {
-%>
-<%
-    //cookie1.getValue()
-%>
-<%            }
-%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!--

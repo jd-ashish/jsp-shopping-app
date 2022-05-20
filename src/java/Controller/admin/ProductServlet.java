@@ -108,6 +108,7 @@ public class ProductServlet extends HttpServlet {
     private void productsUpload(HttpServletRequest request, HttpServletResponse response, PrintWriter out) throws IOException {
         ArrayList<String> img;
         int brand_id = Integer.valueOf((request.getParameter("brand_id").equalsIgnoreCase("Select brand"))?"0":request.getParameter("brand_id"));
+        
         int category_id = Integer.valueOf(request.getParameter("category_id"));
         int sub_category_id = Integer.valueOf(request.getParameter("sub_category_id"));
         int sub_sub_category_id = Integer.valueOf(request.getParameter("sub_sub_category_id"));

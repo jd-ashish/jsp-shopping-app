@@ -1,3 +1,5 @@
+<%@page import="Dao.BannerDao"%>
+<%@page import="modal.Banner"%>
 <%@page import="Dao.SubCategoryDao"%>
 <%@page import="modal.SubCategory"%>
 <%@page import="modal.Category"%>
@@ -10,30 +12,18 @@
         <section class="slider">
             <div class="flexslider">
                 <ul class="slides">
+                    <%
+                    for(Banner banner:BannerDao.getBannerList(99)){
+                    %>
                     <li>
-                        <div class="w3l_banner_nav_right_banner">
-                            <h3>Make your <span>food</span> with Spicy.</h3>
+                        <div class="w3l_banner_nav_right_banner2" style="background: url(img/banner/<%= banner.getFile() %>) no-repeat 0px 0px;">
+                            <h3><%= banner.getTitle() %>.</h3>
                             <div class="more">
-                                <a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+                                <a href="<%= banner.getLink()%>" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="w3l_banner_nav_right_banner1">
-                            <h3>Make your <span>food</span> with Spicy.</h3>
-                            <div class="more">
-                                <a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w3l_banner_nav_right_banner2">
-                            <h3>upto <i>50%</i> off.</h3>
-                            <div class="more">
-                                <a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
-                            </div>
-                        </div>
-                    </li>
+                    <% } %>
                 </ul>
             </div>
         </section>

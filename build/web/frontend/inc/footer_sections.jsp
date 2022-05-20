@@ -1,13 +1,16 @@
+<%@page import="Helper.FooterPositions"%>
+<%@page import="modal.Footer"%>
+<%@page import="Dao.FooterDao"%>
 <div class="footer">
     <div class="container">
         <div class="col-md-3 w3_footer_grid">
             <h3>information</h3>
             <ul class="w3_footer_grid_list">
-                <li><a href="events.html">Events</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Best Deals</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="short-codes.html">Short Codes</a></li>
+                <%
+                for(Footer footer: FooterDao.getFooterListByPositions(FooterPositions.INFORMATION.name())){
+                %>
+                <li><a href="events.html"><%= footer.getTitle() %></a></li>
+                <% } %>
             </ul>
         </div>
         <div class="col-md-3 w3_footer_grid">

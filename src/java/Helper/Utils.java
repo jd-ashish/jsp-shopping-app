@@ -84,4 +84,28 @@ public class Utils {
         String[] strArray = s.split(",");
         return strArray;
     }
+    public static String reverse(String str){
+        StringBuilder sb = new StringBuilder();
+        for(int i=0; i<str.length(); i++){
+            sb.append(str.charAt(str.length()-i-1));
+        }
+        return sb.toString();
+    }
+    public static boolean isNullString(String str){
+        if(str==null){
+            return true;
+        }
+        if(str.length()==0){
+            return true;
+        }
+        return false;
+    }
+    public static String ucfirt(String str){
+        if(!isNullString(str)){
+            String firstWord = str.substring(0,1).toUpperCase();
+            String restString = str.substring(1,str.length()).toLowerCase();
+            return firstWord+restString;
+        }
+        return "";
+    }
 }

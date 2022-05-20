@@ -60,4 +60,13 @@ public class Constent {
     public static final String getBannerUrl(HttpServletRequest request) {
         return Utils.getBaseUrl(request) + "/admin/banner";
     }
+    public static final String getNewsletterUrl(HttpServletRequest request) {
+        return Utils.getBaseUrl(request) + "/newsletter";
+    }
+    public static final String getProductsDetailsUrl(HttpServletRequest request) {
+        return Utils.getBaseUrl(request) + "/products-details";
+    }
+    public static final String getFooterUrl(HttpServletRequest request) {
+        return Utils.getBaseUrl(request) + "/admin/footer";
+    }
 }

@@ -4,6 +4,8 @@
     Author     : Dell1
 --%>
 
+<%@page import="Dao.BannerPositionDao"%>
+<%@page import="modal.BannerPosition"%>
 <%@page import="modal.Category"%>
 <%@page import="Dao.CategoryDao"%>
 <%@page import="modal.Brand"%>
@@ -19,7 +21,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title><%= Constent.APP_NAME%> - Brands list</title>
+        <title><%= Constent.APP_NAME%> - Banner list</title>
         <%@include file="../common/header.jsp" %>
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
@@ -56,54 +58,56 @@
 
                 BrandDao brandDao = new BrandDao();
                 CategoryDao categoryDao = new CategoryDao();
+                BannerPositionDao bannerPositionDao = new BannerPositionDao();
             %>
             <%= Utils.getBread("Create banner", list)%>
 
             <form method="post" enctype="multipart/form-data">
-                <input type="hidden" name="type" value="create_category" />
+                <input type="hidden" name="type" value="create_banner" />
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="cat_name">Category name: </label>
-                            <input type="text" class="form-control" id="cat_name" placeholder="Sub Category nam" name="cat_name" required>
+                            <label for="uploadFiles">Select Banner Positions </label>
+                            <select class="form-control select2" na style="width: 100%" name="banner_id">
+                                <%
+                                    for (BannerPosition bannerPosition : bannerPositionDao.getBannerPosition()) {
+                                %>
+                                <option value="<%= bannerPosition.getBanner_id()%>" ><%= bannerPosition.getPositions()%></option>
+                                <%
+                                    }
+                                %>
+                            </select>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="uploadFiles">Select category image: </label>
+                            <label for="cat_name">Small title: </label>
+                            <input type="text" class="form-control" id="cat_name" placeholder="Title" name="title" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="cat_name">Offer title </label>
+                            <input type="text" class="form-control" maxlength="40" id="cat_name" placeholder="Offer Title" name="offer_title">
+                            <small class="text-right w-100 text-danger">Maximum 40 character</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="uploadFiles">Image: </label>
                             <input type="file" class="form-control" id="file" name="file1"  />
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="uploadFiles">Select Brand </label>
-                            <select class="form-control select2" na style="width: 100%" name="brand_id">
-                                <option>Select brand</option>
-                                <%
-                                    for (Brand brand : brandDao.getBrandList()) {
-                                %>
-                                <option value="<%= brand.getId()%>" ><%= brand.getName()%></option>
-                                <%
-                                    }
-                                %>
-                            </select>
+                            <label for="uploadFiles">Link </label>
+                            <input type="text" class="form-control" id="" placeholder="Link" name="link">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="uploadFiles">Select Category </label>
-                            <select class="form-control select2" na style="width: 100%" name="category_id">
-                                <option>Select Category</option>
-                                <%
-                                    for (Category category : categoryDao.getCategoryList()) {
-                                %>
-                                <option value="<%= category.getId()%>" ><%= category.getName()%></option>
-                                <%
-                                    }
-                                %>
-                            </select>
+                            <label for="uploadFiles">Descriptions </label>
+                            <textarea type="text" class="form-control" id="" name="descriptions"></textarea>
                         </div>
                     </div>
                 </div>

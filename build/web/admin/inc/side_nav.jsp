@@ -51,8 +51,13 @@
             </a>
             <ul id="frontend-setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="<%=  Constent.getBrandUrl(request)%>">
+                    <a href="<%=  Constent.getBannerUrl(request)%>">
                         <i class="bi bi-circle"></i><span>Banner</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<%=  Constent.getFooterUrl(request)%>">
+                        <i class="bi bi-circle"></i><span>Footer</span>
                     </a>
                 </li>
                 

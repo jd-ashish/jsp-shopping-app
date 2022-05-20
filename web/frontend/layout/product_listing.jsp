@@ -1,3 +1,4 @@
+<%@page import="Helper.Constent"%>
 <%@page import="Helper.Utils"%>
 <%@page import="modal.ProductsStock"%>
 <%@page import="java.util.List"%>
@@ -21,7 +22,7 @@
     <div class="container">
         <ul>
             <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">Home</a><span>|</span></li>
-            <li><%=col_name%></li>
+            <li><%=col_name%> <%=col%></li>
         </ul>
     </div>
 </div>
@@ -35,7 +36,7 @@
         </div>
 
         <div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_veg">
-            <h3 class="w3l_fruit"><%= col_name%></h3>
+            <h3 class="w3l_fruit"><%= col_name%> - <%=col%></h3>
             <div class="w3ls_w3l_banner_nav_right_grid1 w3ls_w3l_banner_nav_right_grid1_veg">
                 <%
                     ProductsDao productsDao = new ProductsDao();
@@ -62,7 +63,15 @@
                                 <figure>
                                     <div class="snipcart-item block">
                                         <div class="snipcart-thumb">
-                                            <a href="single.html"><img style="width: auto; height: 170px;" src="<%= Utils.getBaseUrl(request)%>/img/products/<%= products.getThumbnail()%>" alt=" " class="img-responsive" /></a>
+                                            <%
+
+                                                String id = Utils.reverse(GenBase64.enCode(String.valueOf(products.getId())));
+                                                String name = Utils.reverse(GenBase64.enCode(products.getName()));
+
+                                                String query = "id=" + id + "&name=" + name;
+                                            %>
+                                            <a href="<%= Constent.getProductsDetailsUrl(request)%>?<%=query%>"><img title=" " alt=" " src="img/products/<%= products.getThumbnail()%>" width="100px"  height="170"/></a>		
+
                                             <p class="products-name"><%= products.getName()%></p>
                                             <h4><% if (productsStock.size() > 0) {%><%= Utils.CurrencyFormaString(String.valueOf(productsStock.get(0).getOffer_price()))%><% } %> <span><% if (productsStock.size() > 0) {%><%= Utils.CurrencyFormaString(String.valueOf(productsStock.get(0).getTotal_price()))%><% }%></span></h4>
 
