@@ -4,6 +4,8 @@
     Author     : Dell1
 --%>
 
+<%@page import="Dao.FooterDao"%>
+<%@page import="modal.Footer"%>
 <%@page import="Helper.GenBase64"%>
 <%@page import="Helper.FooterPositions"%>
 <%@page import="Dao.BannerPositionDao"%>
@@ -61,7 +63,13 @@
                 CategoryDao categoryDao = new CategoryDao();
                 BannerPositionDao bannerPositionDao = new BannerPositionDao();
                 String titles = request.getParameter("update-title");
-                String details = request.getParameter("update-details");
+                String id = request.getParameter("update-details");
+                String details = null;
+                if (id != null) {
+                    Footer footers = FooterDao.getFooterListById(GenBase64.deCode(Utils.reverse(id))).get(0);
+                    details = footers.getDetails();
+                }
+
             %>
             <%= Utils.getBread("Create banner", list)%>
 
@@ -85,13 +93,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="cat_name">Title: </label>
-                            <input type="text" class="form-control" value="<%=(titles!=null)?GenBase64.deCode(Utils.reverse(titles)):""%>" id="cat_name" placeholder="Title" name="title" required>
+                            <input type="text" class="form-control" value="<%=(titles != null) ? GenBase64.deCode(Utils.reverse(titles)) : ""%>" id="cat_name" placeholder="Title" name="title" required>
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="cat_name">Write details </label>
-                            <textarea class="tinymce-editor" required name="description"><%=(details!=null)?GenBase64.deCode(Utils.reverse(details)):""%></textarea>
+                            <textarea class="tinymce-editor" required name="description"><%=(details != null) ? details : "<p>asihs kaumr</p>"%></textarea>
                         </div>
                     </div>
                 </div>

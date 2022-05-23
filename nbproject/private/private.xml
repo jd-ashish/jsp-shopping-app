@@ -2,30 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/Products/create.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/banner/create.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/footer/create.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/banner/index.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/Utils.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/top_header.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/BannerPositionDao.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/footer.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/CommonFileUpload.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/ProductServlet.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/FooterController.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/NewsLetterController.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/FooterPositions.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Helper/Constent.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/FooterDao.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/common/footer.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/BannerDao.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Controller/admin/BannerController.java</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/common/header.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/frontend/inc/footer_sections.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/footer/index.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/web/admin/Products/index.jsp</file>
-            <file>file:/C:/Users/Dell1/Documents/NetBeansProjects/Shopping/src/java/Dao/ProductsDao.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

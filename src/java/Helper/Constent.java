@@ -69,4 +69,7 @@ public class Constent {
     public static final String getFooterUrl(HttpServletRequest request) {
         return Utils.getBaseUrl(request) + "/admin/footer";
     }
+    public static final String getFrontentFooterUrl(HttpServletRequest request) {
+        return Utils.getBaseUrl(request) + "/info";
+    }
 }

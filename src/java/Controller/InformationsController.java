@@ -29,27 +29,9 @@ public class InformationsController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-
-            Enumeration<String> parameterNames = request.getParameterNames();
-
-            while (parameterNames.hasMoreElements()) {
-
-                String paramName = parameterNames.nextElement();
-                out.write(paramName);
-                out.write("n");
-
-                String[] paramValues = request.getParameterValues(paramName);
-                for (int i = 0; i < paramValues.length; i++) {
-                    String paramValue = paramValues[i];
-                    out.write("t" + paramValue);
-                    out.write("n");
-                }
-
-            }
-
-            out.close();
+        String index = request.getParameter("index");
+        if(index.split("-")[0].equals("in")){
+            request.getRequestDispatcher("frontend/footer.jsp").forward(request, response);
         }
     }
 

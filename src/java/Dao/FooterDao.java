@@ -29,6 +29,7 @@ import modal.User;
  */
 public class FooterDao {
 
+    public static final String table = "footer";
     public static void create(HttpServletRequest request, Footer footer) {
         if (getFooterList(footer.getTitle()).size() > 0) {
             Footer footer1 = new Footer(getFooterList(footer.getTitle()).get(0).getId(), 0, 
@@ -86,6 +87,10 @@ System.err.println("qwertyuioasd "+new Gson().toJson(footer));
     
     public static List<Footer> getFooterListByPositions(String positions){
         String sql = "select * from footer where positions='"+positions+"'";
+        return commonListData(sql);
+    } 
+    public static List<Footer> getFooterListById(String id){
+        String sql = "select * from footer where id="+id+"";
         return commonListData(sql);
     } 
 

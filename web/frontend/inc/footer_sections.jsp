@@ -1,3 +1,6 @@
+<%@page import="Helper.GenBase64"%>
+<%@page import="Helper.Utils"%>
+<%@page import="Helper.Constent"%>
 <%@page import="Helper.FooterPositions"%>
 <%@page import="modal.Footer"%>
 <%@page import="Dao.FooterDao"%>
@@ -7,28 +10,30 @@
             <h3>information</h3>
             <ul class="w3_footer_grid_list">
                 <%
-                for(Footer footer: FooterDao.getFooterListByPositions(FooterPositions.INFORMATION.name())){
+                    for (Footer footer : FooterDao.getFooterListByPositions(FooterPositions.INFORMATION.name())) {
                 %>
-                <li><a href="events.html"><%= footer.getTitle() %></a></li>
-                <% } %>
+                <li><a href="<%= Constent.getFrontentFooterUrl(request)%>?index=in-<%=Utils.reverse(GenBase64.enCode(footer.getTitle()))%>"><%= footer.getTitle()%></a></li>
+                    <% }%>
             </ul>
         </div>
         <div class="col-md-3 w3_footer_grid">
             <h3>policy info</h3>
             <ul class="w3_footer_grid_list">
-                <li><a href="faqs.html">FAQ</a></li>
-                <li><a href="privacy.html">privacy policy</a></li>
-                <li><a href="privacy.html">terms of use</a></li>
+                <%
+                    for (Footer footer : FooterDao.getFooterListByPositions(FooterPositions.POLICY.name())) {
+                %>
+                <li><a href="<%= Constent.getFrontentFooterUrl(request)%>?index=in-<%=Utils.reverse(GenBase64.enCode(footer.getTitle()))%>"><%= footer.getTitle()%></a></li>
+                    <% }%>
             </ul>
         </div>
         <div class="col-md-3 w3_footer_grid">
             <h3>what in stores</h3>
             <ul class="w3_footer_grid_list">
-                <li><a href="pet.html">Pet Food</a></li>
-                <li><a href="frozen.html">Frozen Snacks</a></li>
-                <li><a href="kitchen.html">Kitchen</a></li>
-                <li><a href="products.html">Branded Foods</a></li>
-                <li><a href="household.html">Households</a></li>
+                <%
+                    for (Footer footer : FooterDao.getFooterListByPositions(FooterPositions.STORES.name())) {
+                %>
+                <li><a href="<%= Constent.getFrontentFooterUrl(request)%>?index=in-<%=Utils.reverse(GenBase64.enCode(footer.getTitle()))%>"><%= footer.getTitle()%></a></li>
+                    <% }%>
             </ul>
         </div>
         <div class="col-md-3 w3_footer_grid">

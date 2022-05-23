@@ -80,7 +80,7 @@
                                             <td><%= footer.getPositions()%></td>
                                             <td><%= footer.getTitle()%></td>
                                             <td><%= footer.getCreated_at()%></td>
-                                            <td><a href="<%= Constent.getFooterUrl(request)%>?index=create&update-title=<%= Utils.reverse(GenBase64.enCode(footer.getTitle())) %>&update-details=<%= Utils.reverse(GenBase64.enCode(footer.getDetails())) %>"><i class="fas fa-pen"></i></a></td>
+                                            <td><a href="<%= Constent.getFooterUrl(request)%>?index=create&update-title=<%= Utils.reverse(GenBase64.enCode(footer.getTitle())) %>&update-details=<%= Utils.reverse(GenBase64.enCode(String.valueOf(footer.getId()))) %>"><i class="fas fa-pen"></i></a></td>
                                         
                                         </tr>
                                         <%
